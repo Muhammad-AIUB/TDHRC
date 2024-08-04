@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Example background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for better readability */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.content-section .content {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.content-section .content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.content-section:nth-child(even) .content {
+    order: 2;
+}
+
+.content-section:nth-child(odd) .content {
+    order: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Return to Top Button */
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4681f4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px; /* Larger font size for the arrow */
+}
+
+.return-to-top:hover {
+    background-color: #5783db;
+}
+
+.return-to-top::before {
+    content: '↑';
+    font-size: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        padding: 15px; /* Adjust padding for smaller spacing */
+    }
+
+    .content-section .content {
+        order: 1; /* Stack content before images */
+        text-align: left;
+        margin-bottom: 15px; /* Add spacing between sections */
+    }
+
+    .content-section .content img {
+        margin: 0 auto; /* Center align images */
+    }
+
+    .content-section:nth-child(even) .content {
+        text-align: left; /* Align content left on even sections */
+    }
+
+    .content-section:nth-child(odd) .content {
+        text-align: left; /* Align content left on odd sections */
+    }
+}

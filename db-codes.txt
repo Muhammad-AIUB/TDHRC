@@ -1,0 +1,40 @@
+CREATE TABLE `blogs` (
+  `bid` int(11) NOT NULL AUTO_INCREMENT,
+  `btitle` text NOT NULL,
+  `bintro` text NOT NULL,
+  `bdesc` text NOT NULL,
+  `bimag` varchar(100) NOT NULL,
+  `uid` int(10) NOT NULL,
+  PRIMARY KEY (`bid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+
+CREATE TABLE `contactus` (
+  `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `subject` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  `sub_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+
+CREATE TABLE `login` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `uemail` varchar(255) NOT NULL,
+  `upass` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `fname` varchar(255) NOT NULL,
+  PRIMARY KEY (`uid`),
+  UNIQUE KEY `email` (`uemail`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+
+

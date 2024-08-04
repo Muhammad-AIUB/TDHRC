@@ -1,0 +1,117 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Example background color */
+}
+
+/* Container for the contact form */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px; /* Adjusted max-width for larger container */
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    height: 1000px; /* Increased height for better visibility */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Left column (contact form or iframe) */
+.left-column, .right-column {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Specific styles for the left column */
+.left-column {
+    overflow: hidden; /* Ensure iframe does not overflow */
+}
+
+/* Specific styles for the right column */
+.right-column {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.right-column h2 {
+    margin-top: 0;
+    text-align: center; /* Center align the heading on mobile */
+}
+
+.right-column p {
+    margin: 10px 0;
+}
+
+/* Styles for form elements */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow textarea to be resized vertically */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        height: auto; /* Allow container to adjust height on smaller screens */
+    }
+
+    .left-column, .right-column {
+        flex: 1;
+    }
+
+    .right-column {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Additional styles specific to embedded iframes */
+iframe {
+    max-width: 100%; /* Make sure the embedded iframe is responsive */
+    height: 100%; /* Ensure the iframe fills its container */
+}

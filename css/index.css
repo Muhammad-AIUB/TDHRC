@@ -1,0 +1,150 @@
+body, button {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/texture-seamless.jpg');
+  background-repeat: repeat;
+}
+
+/********** SLIDER **********/
+.slider {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative; /* Ensure slider container is relative for absolute positioning */
+}
+
+.slide-viewer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 100px); /* Adjust for the height of content */
+}
+
+.slide-group {
+  width: 400%; /* Adjust for number of slides */
+  height: 100%;
+  position: relative;
+  display: flex; /* Enable flexbox for responsive layout */
+}
+
+.slide {
+  width: 25%; /* Adjust for number of slides */
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease; /* Smooth transition between slides */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative; /* Ensure image is positioned relative for overlay */
+}
+
+/* Semi-transparent overlay on top of images */
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.slide-title {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.4s ease; /* Smooth opacity transition */
+  pointer-events: none; /* Disable pointer events to allow interaction with images */
+  z-index: 2; /* Ensure title is above the overlay */
+}
+
+/* Ensure slide titles appear on hover */
+.slide:hover .slide-title {
+  opacity: 1;
+}
+
+.slide.active .slide-title {
+  opacity: 1; /* Ensure title remains visible when slide is active */
+}
+
+/********** BUTTONS **********/
+.slide-buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 70px; /* Adjust as needed */
+  width: 100%;
+}
+
+.slide-btn {
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 200%;
+  line-height: 0.5em;
+}
+
+.slide-btn.active, .slide-btn:hover {
+  color: #009900;
+  cursor: pointer;
+}
+
+/********** CONTENT **********/
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.text {
+  width: 45%; /* Adjust width for text content */
+}
+
+.text p {
+  font-size: 1.2em;
+  text-align: justify; /* Justify text */
+}
+
+.image {
+  width: 45%; /* Adjust width as needed */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.image img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/********** RESPONSIVENESS **********/
+@media (max-width: 768px) {
+  .slide-group {
+      width: 800%; /* Adjust for mobile view */
+  }
+
+  .slide {
+      width: 12.5%; /* Adjust for mobile view */
+  }
+
+  .content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .text, .image {
+      width: 90%; /* Adjust width for mobile view */
+      margin-bottom: 20px; /* Adjust spacing between content */
+  }
+}

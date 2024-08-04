@@ -1,0 +1,31 @@
+[08-Jul-2024 14:25:07 UTC] PHP Warning:  Undefined variable $dbName in /home/pirccorg/tdhrc.org/homeblogs.php on line 111
+[08-Jul-2024 14:28:21 UTC] PHP Warning:  move_uploaded_file(C:/xampp/htdocs/tdhrc.org/visuals/assets/pexels-pixabay-262508.jpg): Failed to open stream: No such file or directory in /home/pirccorg/tdhrc.org/userblogUpload.php on line 55
+[08-Jul-2024 14:28:21 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpk9SKO3' to 'C:/xampp/htdocs/tdhrc.org/visuals/assets/pexels-pixabay-262508.jpg' in /home/pirccorg/tdhrc.org/userblogUpload.php on line 55
+[08-Jul-2024 14:28:39 UTC] PHP Warning:  move_uploaded_file(C:/xampp/htdocs/tdhrc.org/visuals/assets/pexels-pixabay-262508.jpg): Failed to open stream: No such file or directory in /home/pirccorg/tdhrc.org/userblogUpload.php on line 55
+[08-Jul-2024 14:28:39 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwy3kKu' to 'C:/xampp/htdocs/tdhrc.org/visuals/assets/pexels-pixabay-262508.jpg' in /home/pirccorg/tdhrc.org/userblogUpload.php on line 55
+[08-Jul-2024 14:31:42 UTC] PHP Warning:  Undefined variable $dbName in /home/pirccorg/tdhrc.org/homeblogs.php on line 111
+[08-Jul-2024 14:45:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/pirccorg/tdhrc.org/userblogUpload.php:18
+Stack trace:
+#0 /home/pirccorg/tdhrc.org/userblogUpload.php(18): mysqli->__construct()
+#1 {main}
+  thrown in /home/pirccorg/tdhrc.org/userblogUpload.php on line 18
+[08-Jul-2024 14:45:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/pirccorg/tdhrc.org/userblogUpload.php:18
+Stack trace:
+#0 /home/pirccorg/tdhrc.org/userblogUpload.php(18): mysqli->__construct()
+#1 {main}
+  thrown in /home/pirccorg/tdhrc.org/userblogUpload.php on line 18
+[08-Jul-2024 14:45:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/pirccorg/tdhrc.org/userblogUpload.php:18
+Stack trace:
+#0 /home/pirccorg/tdhrc.org/userblogUpload.php(18): mysqli->__construct()
+#1 {main}
+  thrown in /home/pirccorg/tdhrc.org/userblogUpload.php on line 18
+[08-Jul-2024 14:45:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/pirccorg/tdhrc.org/userblogUpload.php:18
+Stack trace:
+#0 /home/pirccorg/tdhrc.org/userblogUpload.php(18): mysqli->__construct()
+#1 {main}
+  thrown in /home/pirccorg/tdhrc.org/userblogUpload.php on line 18
+[08-Jul-2024 14:46:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/pirccorg/tdhrc.org/userblogUpload.php:18
+Stack trace:
+#0 /home/pirccorg/tdhrc.org/userblogUpload.php(18): mysqli->__construct()
+#1 {main}
+  thrown in /home/pirccorg/tdhrc.org/userblogUpload.php on line 18

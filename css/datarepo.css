@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.options-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Ensure flexibility in wrapping on smaller screens */
+}
+.option {
+    margin: 10px;
+    text-align: center;
+    flex: 1 0 280px; /* Flex item basis with minimum width */
+    max-width: 280px; /* Limit maximum width for consistency */
+}
+.option img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+.option img:hover {
+    transform: scale(1.05);
+}
+.option-title {
+    margin-top: -60px;
+    font-size: 1em;
+    color: #333;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5dbea3;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.content-section {
+    display: flex;
+    flex-direction: column; /* Adjust content layout for mobile */
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.content-section .content {
+    text-align: justify;
+    margin-bottom: 20px; /* Provide space between sections */
+}
+.content-section .content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto; /* Center images */
+    display: block;
+}
+
+/* Return to Top Button */
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4681f4;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.return-to-top:hover {
+    background-color: #5783db;
+}
+
+.return-to-top::before {
+    content: '↑';
+    font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .option {
+        flex-basis: 100%; /* Full width for options on smaller screens */
+        max-width: 100%;
+    }
+}
